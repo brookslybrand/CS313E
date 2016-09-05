@@ -13,11 +13,10 @@
 #  Date Created: 09/03/2016
 
 #  Date Last Modified: 09/03/2016
-     
-def main():
-  
-  # All of the lines saved as variables
 
+def main():
+
+  # All of the lines saved as variables
   line1 = "     "
   line2 = "         *****************"
   line3 = "        ***$$$$$$$$$$$$$$**"
@@ -39,7 +38,6 @@ def main():
   line19 = "     "
 
   # print all of the lines
-
   print(line1)
   print(line2)
   print(line3)
@@ -60,6 +58,5 @@ def main():
   print(line18)
   print(line19)
 
-
-main()
-     
+if __name__ == '__main__':
+    main()
