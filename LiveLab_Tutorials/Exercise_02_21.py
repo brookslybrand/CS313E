@@ -22,8 +22,7 @@ def balance(deposit=0, start_balance=0, rate=(1 + .05/12), months=6):
 def main():
 
   # prompt for monthly deposit
-  #dep = float(input("Enter the monthly saving amount: "))
-  dep = 100.0
+  dep = float(input("Enter the monthly saving amount: "))
 
   rate = 1 + 0.05/12
 
