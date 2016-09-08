@@ -1,4 +1,15 @@
 # NWS windchill formula
+'''
+Split word in characters, reverse, print.
+Python lets us utilize the 'for each' paradigm.
+This allows the by passing of list indexes.
+
+a = '1234'
+for value in reversed(list(a)): # must use list() constructor!
+    print(value, end='')
+
+>>> 4321
+'''
 
 def main():
 
@@ -12,8 +23,6 @@ def main():
   # display the nnumber in reverse order
   for i in range(0, myint_len):
     print( myint_str[ myint_len - (i + 1) ] )
-    
-
 
 if __name__ == '__main__':
     main()
