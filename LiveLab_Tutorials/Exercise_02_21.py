@@ -14,7 +14,7 @@ def balance(deposit=0, start_balance=0, rate=(1 + .05/12), months=6):
     b = start_balance
     r = rate
     m = months
-    return balance(deposit=d, start_balance=(d+b)*r, months=m-1)
+    return balance(deposit=d, start_balance=(d + b) * r, months=m - 1)
 
 #print( balance(deposit=100) )
 

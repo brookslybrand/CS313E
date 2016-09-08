@@ -8,7 +8,7 @@ def pi_approx(denom):
     approximation of pi.
     '''
     sequence = lambda n,x: (1/x) * (-1)**(n%2)
-    series = sum(sequence(n,x) for n,x in enumerate(range(1,denom+1,2)))
+    series = sum(sequence(n,x) for n,x in enumerate(range(1, denom+1, 2)))
     return 4 * series
 
 #for value in [11,15]:
