@@ -11,8 +11,8 @@ def pi_approx(denom):
     series = sum(sequence(n,x) for n,x in enumerate(range(1, denom+1, 2)))
     return 4 * series
 
-#for value in [11,15]:
-#  print(pi_approx(value))
+for value in [11,15]:
+  print(pi_approx(value))
 
 
 

@@ -1,6 +1,6 @@
 #  File: EasterSunday.py
 
-#  Description: Calculate the date for Easter Sunday since 1583 using Carl Friedrich Gauss's algorithm 
+#  Description: Calculate the date for Easter Sunday since 1583 using Carl Friedrich Gauss's algorithm
 
 #  Student Name: Charles Lybrand
 
@@ -12,7 +12,7 @@
 
 #  Date Created: 09/07/2016
 
-#  Date Last Modified: 09/07/2016
+#  Date Last Modified: 09/09/2016
 
 def main():
 
@@ -54,6 +54,9 @@ def main():
     
   # index of the months
   months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+  # print a new line
+  print(" ")
     
   # return Easter Sunday for year y
   print( "In", y, "Easter Sunday is on", p, months[n - 1] + "." )
