@@ -14,7 +14,7 @@
 
 #  Date Created: 09/20/2016
 
-#  Date Last Modified: 09/20/2016
+#  Date Last Modified: 09/21/2016
 
 
 def is_leap(y):
@@ -46,11 +46,11 @@ def inputs():
     y = int(input("Enter year: "))
 
   m = 0
-  while ( not( 1 <= m <= 12 ) ):
+  while ( not ( 1 <= m <= 12 ) ):
     m = int(input("Enter month: "))
 
   d = 0
-  while ( not( 1 <= d <= month_days(m - 1, y) ) ):
+  while ( not ( 1 <= d <= month_days(m - 1, y) ) ):
     d = int(input("Enter day: "))
 
   return [y, m, d]
@@ -61,13 +61,7 @@ def inputs_convert():
   Convert the inputs into a b c and d necessary for the Zeller algorithm
   '''
 
-  date = inputs()
-
-  # Use tuple unpacking
-  # y, m, b = date
-  y = date[0]
-  m = date[1]
-  b = date[2]
+  y, m, b = inputs()
 
   # adjust months
   if ( m < 3):
@@ -83,15 +77,13 @@ def inputs_convert():
 
   return [a, b, c, d]
 
-# Updated signature for compute_day; accepts list as args
-# def compute_day(*args):
-#     a, b, c, d = args
-def compute_day(a, b, c, d):
+
+def compute_day(*args):
   '''
   Zeller's Algorithm for computing the day of the week
   '''
-
-  abcd = inputs_convert
+  
+  a, b, c, d = args
 
   # algorithm
 
@@ -118,20 +110,10 @@ def main():
   Compute the day
   '''
 
-  abcd = inputs_convert()
+  day = compute_day(*inputs_convert())
 
-  # Indexings over the days gets tiresome and hard to read. Why not pass a list?
-  # To pass as a list, the signature of compute_day needs changed to a star argument.
-  # Star-args are similar to a mathematica f[x__];
-  # day = compute_day(abcd)
-  day = compute_day(abcd[0], abcd[1], abcd[2], abcd[3])
-
-
-  # Time to talk about string formatting. You're using a JS style concatenation.
-  # Think about build string templates to populate
-  # print( 'The day is %s.' % day )
   print()
-  print("The day is", day + ".")
+  print("The day is %s." % day)
 
 
 if __name__ == "__main__":
