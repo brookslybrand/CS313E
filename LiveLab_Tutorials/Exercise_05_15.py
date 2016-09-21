@@ -1,18 +1,16 @@
+#!/usr/bin/evn python3
 
-# coding: utf-8
-
-# In[7]:
-
-# find the larges integer n such that n**3 < 12000
+from math import floor
+def less_than():
+    ''' Computes n**3 < 12000 '''
+    return floor(12000**(1.0/3.0))
 
 def main():
-  
-  n = 1
-  while(n**3 < 12000):
-    n = n + 1
+    n = 1
+    while(n**3 < 12000):
+        n += 1
 
-  print(n - 1)
+    print(n - 1)
 
 if __name__ == "__main__":
-  main()
-
+    main()
