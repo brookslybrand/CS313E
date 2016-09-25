@@ -14,7 +14,7 @@
 
 #  Date Created: 09/20/2016
 
-#  Date Last Modified: 09/21/2016
+#  Date Last Modified: 09/22/2016
 
 
 def is_leap(y):
@@ -31,6 +31,7 @@ def month_days(m, y):
 
   monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
+  # handle leap year exception
   if( m == 1 and is_leap(y) ):
     return 29
   else:
@@ -58,7 +59,7 @@ def inputs():
 
 def inputs_convert():
   '''
-  Convert the inputs into a b c and d necessary for the Zeller algorithm
+  Convert the inputs into a b c and d which are used for the Zeller algorithm
   '''
 
   y, m, b = inputs()
