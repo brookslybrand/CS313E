@@ -12,7 +12,7 @@
 
 #  Date Created: 09/23/2016
 
-#  Date Last Modified: 09/25/2016
+#  Date Last Modified: 09/27/2016
 
 
 def main():
@@ -52,7 +52,7 @@ def main():
     # reset the cycle count
     cycle = 0
 
-        
+  # print the results
   print('\nThe number %s has the longest cycle length of %s.\n' % (num, cycle_largest))
   
 
