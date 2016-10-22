@@ -12,7 +12,7 @@
 
 #  Date Created: 10/10/2016
 
-#  Date Last Modified: 10/11/2016
+#  Date Last Modified: 10/12/2016
 
 import math
 import random
@@ -30,13 +30,6 @@ def num_digits(num):
   	digits += 1
 
   return digits
-
-
-def format_num(num):
-  '''
-  format numbers to six decimal places
-  '''
-  return ('%.6f' % num)
 
 
 def padding_num(num):
@@ -79,15 +72,12 @@ def computePi(numThrows):
   # calculated value of PI
   calc_PI = 4 * (circle/throws)
   # output calculated value of PI
-  print("Calculated PI =", format_num(calc_PI) , end ="   ")
+  print("Calculated PI = %.6f" % (calc_PI), end ="   ")
 
   # difference between real PI and calc_PI
   dif = calc_PI - math.pi
   # output difference, adding '+' if need be
-  if (dif < 0):
-    print("Difference =", format_num(dif) ) # format for negative difference
-  else:
-  	print("Difference =", "+" + format_num(dif) ) # format for positive difference
+  print ("Difference = %+-.6f" % dif )
 
 
 def main():
